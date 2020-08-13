@@ -20,7 +20,7 @@ exports.follow = async (req, res, next) => {
     [user_id, friend_user_id],
     [friend_user_id, user_id],
   ];
-
+  //
   try {
     [result] = await connection.query(query, [data]);
     res.status(200).json({ success: true });
