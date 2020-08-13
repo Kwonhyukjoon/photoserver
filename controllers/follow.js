@@ -15,7 +15,7 @@ exports.follow = async (req, res, next) => {
   }
 
   // table에 unique를 활용한다.
-  let query = "insert into photo_follow (user_id, friend_user_id) values (?)";
+  let query = "insert into photo_follow (user_id, friend_user_id) values ?";
   let data = [
     [user_id, friend_user_id],
     [friend_user_id, user_id],
